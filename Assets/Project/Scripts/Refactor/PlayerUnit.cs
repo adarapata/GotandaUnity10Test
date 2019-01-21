@@ -17,7 +17,7 @@ public class PlayerUnit : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        transform.position += new Vector3(horizontal, vertical, 0F) * _speed * Time.deltaTime;
+        Move(new Vector3(horizontal, vertical, 0F));
 
         if (Input.GetButton("Fire1") && _reloadTime < 0)
         {
@@ -35,5 +35,10 @@ public class PlayerUnit : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void Move(Vector3 direction)
+    {
+        transform.position += direction * _speed * Time.deltaTime;
     }
 }
