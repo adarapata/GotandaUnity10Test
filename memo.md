@@ -6,8 +6,7 @@ Unityでテスト何処から始めたらいいの？
 
 個人的には全部PlayModeテストでいい気がする。
 
-
-PlayMode!
+Modeee
 
 Prefabをいい感じに呼び出す機能などはありません。
 
